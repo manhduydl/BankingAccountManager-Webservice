@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:9133/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9133/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9133/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Service" />
+      <xsd:import schemaLocation="http://localhost:9133/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Dang_nhap_InputMessage">
+    <wsdl:part name="parameters" element="tns:Dang_nhap" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Dang_nhap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Dang_nhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Doi_mat_khau_InputMessage">
+    <wsdl:part name="parameters" element="tns:Doi_mat_khau" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Doi_mat_khau_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Doi_mat_khauResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Lay_khach_hang_InputMessage">
+    <wsdl:part name="parameters" element="tns:Lay_khach_hang" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Lay_khach_hang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Lay_khach_hangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Lay_so_tai_khoan_InputMessage">
+    <wsdl:part name="parameters" element="tns:Lay_so_tai_khoan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Lay_so_tai_khoan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Lay_so_tai_khoanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Lay_so_tien_InputMessage">
+    <wsdl:part name="parameters" element="tns:Lay_so_tien" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Lay_so_tien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Lay_so_tienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Lay_tinh_trang_InputMessage">
+    <wsdl:part name="parameters" element="tns:Lay_tinh_trang" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Lay_tinh_trang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Lay_tinh_trangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Thay_doi_tinh_trang_InputMessage">
+    <wsdl:part name="parameters" element="tns:Thay_doi_tinh_trang" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Thay_doi_tinh_trang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Thay_doi_tinh_trangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Them_chuyen_tien_InputMessage">
+    <wsdl:part name="parameters" element="tns:Them_chuyen_tien" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Them_chuyen_tien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Them_chuyen_tienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Kiem_tra_tai_khoan_InputMessage">
+    <wsdl:part name="parameters" element="tns:Kiem_tra_tai_khoan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Kiem_tra_tai_khoan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Kiem_tra_tai_khoanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ds_chuyen_tien_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ds_chuyen_tien" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ds_chuyen_tien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ds_chuyen_tienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ds_nhan_tien_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ds_nhan_tien" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ds_nhan_tien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ds_nhan_tienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ds_chuyen_tien_tong_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ds_chuyen_tien_tong" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ds_chuyen_tien_tong_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ds_chuyen_tien_tongResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nap_tien_InputMessage">
+    <wsdl:part name="parameters" element="tns:Nap_tien" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Nap_tien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Nap_tienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Tao_the_nap_tien_InputMessage">
+    <wsdl:part name="parameters" element="tns:Tao_the_nap_tien" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Tao_the_nap_tien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Tao_the_nap_tienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ds_nap_tien_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ds_nap_tien" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ds_nap_tien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ds_nap_tienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Them_nap_tien_InputMessage">
+    <wsdl:part name="parameters" element="tns:Them_nap_tien" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Them_nap_tien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Them_nap_tienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Lay_so_tien_the_InputMessage">
+    <wsdl:part name="parameters" element="tns:Lay_so_tien_the" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Lay_so_tien_the_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Lay_so_tien_theResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ds_the_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ds_the" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ds_the_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ds_theResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Tao_the_ngan_hang_InputMessage">
+    <wsdl:part name="parameters" element="tns:Tao_the_ngan_hang" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Tao_the_ngan_hang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Tao_the_ngan_hangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Lay_loai_tai_khoan_InputMessage">
+    <wsdl:part name="parameters" element="tns:Lay_loai_tai_khoan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Lay_loai_tai_khoan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Lay_loai_tai_khoanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Thay_doi_loai_tai_khoan_InputMessage">
+    <wsdl:part name="parameters" element="tns:Thay_doi_loai_tai_khoan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Thay_doi_loai_tai_khoan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Thay_doi_loai_tai_khoanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Rut_tien_InputMessage">
+    <wsdl:part name="parameters" element="tns:Rut_tien" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Rut_tien_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Rut_tienResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Lay_ten_ngan_hang_InputMessage">
+    <wsdl:part name="parameters" element="tns:Lay_ten_ngan_hang" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Lay_ten_ngan_hang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Lay_ten_ngan_hangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Doi_ten_ngan_hang_InputMessage">
+    <wsdl:part name="parameters" element="tns:Doi_ten_ngan_hang" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Doi_ten_ngan_hang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Doi_ten_ngan_hangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Danh_sach_theo_ngay_InputMessage">
+    <wsdl:part name="parameters" element="tns:Danh_sach_theo_ngay" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Danh_sach_theo_ngay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Danh_sach_theo_ngayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Them_khach_hang_InputMessage">
+    <wsdl:part name="parameters" element="tns:Them_khach_hang" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Them_khach_hang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Them_khach_hangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Thay_doi_khach_hang_InputMessage">
+    <wsdl:part name="parameters" element="tns:Thay_doi_khach_hang" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Thay_doi_khach_hang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Thay_doi_khach_hangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ds_khach_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ds_khach" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ds_khach_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ds_khachResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Them_tai_khoan_InputMessage">
+    <wsdl:part name="parameters" element="tns:Them_tai_khoan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Them_tai_khoan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Them_tai_khoanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ds_tai_khoan_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ds_tai_khoan" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ds_tai_khoan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ds_tai_khoanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ma_khach_hang_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ma_khach_hang" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ma_khach_hang_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ma_khach_hangResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ds_tai_khoan_theo_kh_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ds_tai_khoan_theo_kh" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ds_tai_khoan_theo_kh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ds_tai_khoan_theo_khResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Dang_nhap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Dang_nhap" message="tns:IService1_Dang_nhap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Dang_nhapResponse" message="tns:IService1_Dang_nhap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Doi_mat_khau">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Doi_mat_khau" message="tns:IService1_Doi_mat_khau_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Doi_mat_khauResponse" message="tns:IService1_Doi_mat_khau_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Lay_khach_hang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Lay_khach_hang" message="tns:IService1_Lay_khach_hang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Lay_khach_hangResponse" message="tns:IService1_Lay_khach_hang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Lay_so_tai_khoan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Lay_so_tai_khoan" message="tns:IService1_Lay_so_tai_khoan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Lay_so_tai_khoanResponse" message="tns:IService1_Lay_so_tai_khoan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Lay_so_tien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Lay_so_tien" message="tns:IService1_Lay_so_tien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Lay_so_tienResponse" message="tns:IService1_Lay_so_tien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Lay_tinh_trang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Lay_tinh_trang" message="tns:IService1_Lay_tinh_trang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Lay_tinh_trangResponse" message="tns:IService1_Lay_tinh_trang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Thay_doi_tinh_trang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Thay_doi_tinh_trang" message="tns:IService1_Thay_doi_tinh_trang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Thay_doi_tinh_trangResponse" message="tns:IService1_Thay_doi_tinh_trang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Them_chuyen_tien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Them_chuyen_tien" message="tns:IService1_Them_chuyen_tien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Them_chuyen_tienResponse" message="tns:IService1_Them_chuyen_tien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Kiem_tra_tai_khoan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Kiem_tra_tai_khoan" message="tns:IService1_Kiem_tra_tai_khoan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Kiem_tra_tai_khoanResponse" message="tns:IService1_Kiem_tra_tai_khoan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ds_chuyen_tien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Ds_chuyen_tien" message="tns:IService1_Ds_chuyen_tien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Ds_chuyen_tienResponse" message="tns:IService1_Ds_chuyen_tien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ds_nhan_tien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Ds_nhan_tien" message="tns:IService1_Ds_nhan_tien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Ds_nhan_tienResponse" message="tns:IService1_Ds_nhan_tien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ds_chuyen_tien_tong">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Ds_chuyen_tien_tong" message="tns:IService1_Ds_chuyen_tien_tong_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Ds_chuyen_tien_tongResponse" message="tns:IService1_Ds_chuyen_tien_tong_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Nap_tien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Nap_tien" message="tns:IService1_Nap_tien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Nap_tienResponse" message="tns:IService1_Nap_tien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Tao_the_nap_tien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Tao_the_nap_tien" message="tns:IService1_Tao_the_nap_tien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Tao_the_nap_tienResponse" message="tns:IService1_Tao_the_nap_tien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ds_nap_tien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Ds_nap_tien" message="tns:IService1_Ds_nap_tien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Ds_nap_tienResponse" message="tns:IService1_Ds_nap_tien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Them_nap_tien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Them_nap_tien" message="tns:IService1_Them_nap_tien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Them_nap_tienResponse" message="tns:IService1_Them_nap_tien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Lay_so_tien_the">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Lay_so_tien_the" message="tns:IService1_Lay_so_tien_the_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Lay_so_tien_theResponse" message="tns:IService1_Lay_so_tien_the_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ds_the">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Ds_the" message="tns:IService1_Ds_the_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Ds_theResponse" message="tns:IService1_Ds_the_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Tao_the_ngan_hang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Tao_the_ngan_hang" message="tns:IService1_Tao_the_ngan_hang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Tao_the_ngan_hangResponse" message="tns:IService1_Tao_the_ngan_hang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Lay_loai_tai_khoan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Lay_loai_tai_khoan" message="tns:IService1_Lay_loai_tai_khoan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Lay_loai_tai_khoanResponse" message="tns:IService1_Lay_loai_tai_khoan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Thay_doi_loai_tai_khoan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Thay_doi_loai_tai_khoan" message="tns:IService1_Thay_doi_loai_tai_khoan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Thay_doi_loai_tai_khoanResponse" message="tns:IService1_Thay_doi_loai_tai_khoan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Rut_tien">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Rut_tien" message="tns:IService1_Rut_tien_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Rut_tienResponse" message="tns:IService1_Rut_tien_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Lay_ten_ngan_hang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Lay_ten_ngan_hang" message="tns:IService1_Lay_ten_ngan_hang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Lay_ten_ngan_hangResponse" message="tns:IService1_Lay_ten_ngan_hang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Doi_ten_ngan_hang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Doi_ten_ngan_hang" message="tns:IService1_Doi_ten_ngan_hang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Doi_ten_ngan_hangResponse" message="tns:IService1_Doi_ten_ngan_hang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Danh_sach_theo_ngay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Danh_sach_theo_ngay" message="tns:IService1_Danh_sach_theo_ngay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Danh_sach_theo_ngayResponse" message="tns:IService1_Danh_sach_theo_ngay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Them_khach_hang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Them_khach_hang" message="tns:IService1_Them_khach_hang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Them_khach_hangResponse" message="tns:IService1_Them_khach_hang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Thay_doi_khach_hang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Thay_doi_khach_hang" message="tns:IService1_Thay_doi_khach_hang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Thay_doi_khach_hangResponse" message="tns:IService1_Thay_doi_khach_hang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ds_khach">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Ds_khach" message="tns:IService1_Ds_khach_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Ds_khachResponse" message="tns:IService1_Ds_khach_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Them_tai_khoan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Them_tai_khoan" message="tns:IService1_Them_tai_khoan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Them_tai_khoanResponse" message="tns:IService1_Them_tai_khoan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ds_tai_khoan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Ds_tai_khoan" message="tns:IService1_Ds_tai_khoan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Ds_tai_khoanResponse" message="tns:IService1_Ds_tai_khoan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ma_khach_hang">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Ma_khach_hang" message="tns:IService1_Ma_khach_hang_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Ma_khach_hangResponse" message="tns:IService1_Ma_khach_hang_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ds_tai_khoan_theo_kh">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Ds_tai_khoan_theo_kh" message="tns:IService1_Ds_tai_khoan_theo_kh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Ds_tai_khoan_theo_khResponse" message="tns:IService1_Ds_tai_khoan_theo_kh_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dang_nhap">
+      <soap:operation soapAction="http://tempuri.org/IService1/Dang_nhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Doi_mat_khau">
+      <soap:operation soapAction="http://tempuri.org/IService1/Doi_mat_khau" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lay_khach_hang">
+      <soap:operation soapAction="http://tempuri.org/IService1/Lay_khach_hang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lay_so_tai_khoan">
+      <soap:operation soapAction="http://tempuri.org/IService1/Lay_so_tai_khoan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lay_so_tien">
+      <soap:operation soapAction="http://tempuri.org/IService1/Lay_so_tien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lay_tinh_trang">
+      <soap:operation soapAction="http://tempuri.org/IService1/Lay_tinh_trang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thay_doi_tinh_trang">
+      <soap:operation soapAction="http://tempuri.org/IService1/Thay_doi_tinh_trang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Them_chuyen_tien">
+      <soap:operation soapAction="http://tempuri.org/IService1/Them_chuyen_tien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Kiem_tra_tai_khoan">
+      <soap:operation soapAction="http://tempuri.org/IService1/Kiem_tra_tai_khoan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ds_chuyen_tien">
+      <soap:operation soapAction="http://tempuri.org/IService1/Ds_chuyen_tien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ds_nhan_tien">
+      <soap:operation soapAction="http://tempuri.org/IService1/Ds_nhan_tien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ds_chuyen_tien_tong">
+      <soap:operation soapAction="http://tempuri.org/IService1/Ds_chuyen_tien_tong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Nap_tien">
+      <soap:operation soapAction="http://tempuri.org/IService1/Nap_tien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tao_the_nap_tien">
+      <soap:operation soapAction="http://tempuri.org/IService1/Tao_the_nap_tien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ds_nap_tien">
+      <soap:operation soapAction="http://tempuri.org/IService1/Ds_nap_tien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Them_nap_tien">
+      <soap:operation soapAction="http://tempuri.org/IService1/Them_nap_tien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lay_so_tien_the">
+      <soap:operation soapAction="http://tempuri.org/IService1/Lay_so_tien_the" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ds_the">
+      <soap:operation soapAction="http://tempuri.org/IService1/Ds_the" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tao_the_ngan_hang">
+      <soap:operation soapAction="http://tempuri.org/IService1/Tao_the_ngan_hang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lay_loai_tai_khoan">
+      <soap:operation soapAction="http://tempuri.org/IService1/Lay_loai_tai_khoan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thay_doi_loai_tai_khoan">
+      <soap:operation soapAction="http://tempuri.org/IService1/Thay_doi_loai_tai_khoan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rut_tien">
+      <soap:operation soapAction="http://tempuri.org/IService1/Rut_tien" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lay_ten_ngan_hang">
+      <soap:operation soapAction="http://tempuri.org/IService1/Lay_ten_ngan_hang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Doi_ten_ngan_hang">
+      <soap:operation soapAction="http://tempuri.org/IService1/Doi_ten_ngan_hang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Danh_sach_theo_ngay">
+      <soap:operation soapAction="http://tempuri.org/IService1/Danh_sach_theo_ngay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Them_khach_hang">
+      <soap:operation soapAction="http://tempuri.org/IService1/Them_khach_hang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Thay_doi_khach_hang">
+      <soap:operation soapAction="http://tempuri.org/IService1/Thay_doi_khach_hang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ds_khach">
+      <soap:operation soapAction="http://tempuri.org/IService1/Ds_khach" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Them_tai_khoan">
+      <soap:operation soapAction="http://tempuri.org/IService1/Them_tai_khoan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ds_tai_khoan">
+      <soap:operation soapAction="http://tempuri.org/IService1/Ds_tai_khoan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ma_khach_hang">
+      <soap:operation soapAction="http://tempuri.org/IService1/Ma_khach_hang" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ds_tai_khoan_theo_kh">
+      <soap:operation soapAction="http://tempuri.org/IService1/Ds_tai_khoan_theo_kh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:9133/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

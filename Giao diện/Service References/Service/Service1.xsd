@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Khach_hang">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cmnd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dia_chi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gioi_tinh" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ho_ten" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ma_khach_hang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ngay_sinh" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Tinh_trang" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Khach_hang" nillable="true" type="tns:Khach_hang" />
+  <xs:complexType name="Chuyen_tien">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Msgd_chuyen_tien" type="xs:int" />
+      <xs:element minOccurs="0" name="So_tien_chuyen" type="xs:double" />
+      <xs:element minOccurs="0" name="Stk_chuyen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Stk_nhan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Thoi_gian_gd" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Chuyen_tien" nillable="true" type="tns:Chuyen_tien" />
+  <xs:complexType name="ArrayOfChuyen_tien">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Chuyen_tien" nillable="true" type="tns:Chuyen_tien" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChuyen_tien" nillable="true" type="tns:ArrayOfChuyen_tien" />
+  <xs:complexType name="ArrayOfNap_tien">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Nap_tien" nillable="true" type="tns:Nap_tien" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNap_tien" nillable="true" type="tns:ArrayOfNap_tien" />
+  <xs:complexType name="Nap_tien">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ma_code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Msgd_nap_tien" type="xs:int" />
+      <xs:element minOccurs="0" name="So_tien_nap" type="xs:double" />
+      <xs:element minOccurs="0" name="Stk_nap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Thoi_gian_gd" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Nap_tien" nillable="true" type="tns:Nap_tien" />
+  <xs:complexType name="ArrayOfThe_nap_tien">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="The_nap_tien" nillable="true" type="tns:The_nap_tien" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfThe_nap_tien" nillable="true" type="tns:ArrayOfThe_nap_tien" />
+  <xs:complexType name="The_nap_tien">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ma_code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="So_tien" type="xs:double" />
+      <xs:element minOccurs="0" name="Tinh_trang" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="The_nap_tien" nillable="true" type="tns:The_nap_tien" />
+  <xs:complexType name="ArrayOfKhach_hang">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Khach_hang" nillable="true" type="tns:Khach_hang" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKhach_hang" nillable="true" type="tns:ArrayOfKhach_hang" />
+  <xs:complexType name="Tai_khoan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Loai_tai_khoan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ma_khach_hang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="So_tai_khoan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="So_tien" type="xs:double" />
+      <xs:element minOccurs="0" name="Tinh_trang" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tai_khoan" nillable="true" type="tns:Tai_khoan" />
+  <xs:complexType name="Dang_nhap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Mat_khau" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="So_tai_khoan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ten_dang_nhap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="level" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Dang_nhap" nillable="true" type="tns:Dang_nhap" />
+  <xs:complexType name="ArrayOfTai_khoan">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Tai_khoan" nillable="true" type="tns:Tai_khoan" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTai_khoan" nillable="true" type="tns:ArrayOfTai_khoan" />
+</xs:schema>

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:9133/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Service" />
+  <xs:import schemaLocation="http://localhost:9133/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DTO" />
+  <xs:element name="GetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataUsingDataContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Service" minOccurs="0" name="composite" nillable="true" type="q1:CompositeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataUsingDataContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Service" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q2:CompositeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Dang_nhap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ten_tai_khoan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Mat_khau" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Dang_nhapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Dang_nhapResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Doi_mat_khau">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ten_dang_nhap" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Mat_khau_moi" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Doi_mat_khauResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lay_khach_hang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ten_dang_nhap" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Mat_khau" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lay_khach_hangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="Lay_khach_hangResult" nillable="true" type="q3:Khach_hang" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lay_so_tai_khoan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ten_tai_khoan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Mat_khau" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lay_so_tai_khoanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Lay_so_tai_khoanResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lay_so_tien">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="So_tai_khoan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lay_so_tienResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Lay_so_tienResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lay_tinh_trang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="So_tai_khoan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lay_tinh_trangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Lay_tinh_trangResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Thay_doi_tinh_trang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="So_tai_khoan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tinh_trang" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Thay_doi_tinh_trangResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Them_chuyen_tien">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="CT" nillable="true" type="q4:Chuyen_tien" />
+        <xs:element minOccurs="0" name="Loai" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Them_chuyen_tienResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Kiem_tra_tai_khoan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="So_tai_khoan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Kiem_tra_tai_khoanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Kiem_tra_tai_khoanResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ds_chuyen_tien">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Stk_chuyen" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ds_chuyen_tienResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="Ds_chuyen_tienResult" nillable="true" type="q5:ArrayOfChuyen_tien" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ds_nhan_tien">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Stk_nhan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ds_nhan_tienResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="Ds_nhan_tienResult" nillable="true" type="q6:ArrayOfChuyen_tien" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ds_chuyen_tien_tong">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="So_tai_khoan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ds_chuyen_tien_tongResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="Ds_chuyen_tien_tongResult" nillable="true" type="q7:ArrayOfChuyen_tien" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Nap_tien">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="So_tai_khoan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="So_tien" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Nap_tienResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tao_the_nap_tien">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="So_tien" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tao_the_nap_tienResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ds_nap_tien">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Stk_nap" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ds_nap_tienResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="Ds_nap_tienResult" nillable="true" type="q8:ArrayOfNap_tien" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Them_nap_tien">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="temp" nillable="true" type="q9:Nap_tien" />
+        <xs:element minOccurs="0" name="Ma_code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Them_nap_tienResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Them_nap_tienResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lay_so_tien_the">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ma_code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lay_so_tien_theResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Lay_so_tien_theResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ds_the">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ds_theResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="Ds_theResult" nillable="true" type="q10:ArrayOfThe_nap_tien" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tao_the_ngan_hang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="So_tien" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tao_the_ngan_hangResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lay_loai_tai_khoan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="So_tai_khoan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lay_loai_tai_khoanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Lay_loai_tai_khoanResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Thay_doi_loai_tai_khoan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="So_tai_khoan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Loai_tai_khoan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Thay_doi_loai_tai_khoanResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rut_tien">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="So_tai_khoan" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="So_tien" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rut_tienResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lay_ten_ngan_hang">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lay_ten_ngan_hangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Lay_ten_ngan_hangResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Doi_ten_ngan_hang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ten_moi" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Doi_ten_ngan_hangResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Danh_sach_theo_ngay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bd" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="kt" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Danh_sach_theo_ngayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="Danh_sach_theo_ngayResult" nillable="true" type="q11:ArrayOfChuyen_tien" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Them_khach_hang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="khachhang" nillable="true" type="q12:Khach_hang" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Them_khach_hangResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Thay_doi_khach_hang">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="khachhang" nillable="true" type="q13:Khach_hang" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Thay_doi_khach_hangResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ds_khach">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ds_khachResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="Ds_khachResult" nillable="true" type="q14:ArrayOfKhach_hang" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Them_tai_khoan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="Taikhoan" nillable="true" type="q15:Tai_khoan" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="dangnhap" nillable="true" type="q16:Dang_nhap" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Them_tai_khoanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Them_tai_khoanResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ds_tai_khoan">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ds_tai_khoanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="Ds_tai_khoanResult" nillable="true" type="q17:ArrayOfTai_khoan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ma_khach_hang">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ma_khach_hangResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ma_khach_hangResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ds_tai_khoan_theo_kh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Ma_khach_hang" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ds_tai_khoan_theo_khResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/DTO" minOccurs="0" name="Ds_tai_khoan_theo_khResult" nillable="true" type="q18:ArrayOfTai_khoan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
